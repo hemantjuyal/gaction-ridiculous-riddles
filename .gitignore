@@ -2,3 +2,6 @@
 functions/.eslintrc.json
 functions/package-lock.json
 functions/node_modules/
+source/
+actions/package.json
+actions/agent.json
