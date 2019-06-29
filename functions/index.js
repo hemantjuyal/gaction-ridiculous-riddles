@@ -42,7 +42,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       agent.context.set(riddle.context);
       agent.add(new Card({
         title: 'Ridiculous Riddle of The Day',
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/smartassistants/images/logo/logo.jpg',
+        imageUrl: 'https://smartassistants.s3-eu-west-1.amazonaws.com/images/logo/logo.jpg',
         text: riddle.riddle_text
       }));
       agent.add(new Suggestion('ask me another riddle'));
@@ -52,7 +52,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       agent.context.set(riddle.context);
       agent.add(new Card({
         title: 'आज की मज़ेदार पहेली ',
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/smartassistants/images/logo/logo.jpg',
+        imageUrl: 'https://smartassistants.s3-eu-west-1.amazonaws.com/images/logo/logo.jpg',
         text: riddle.riddle_text
       }));
       agent.add(new Suggestion('कोई और पहेली पूछो'));
@@ -86,7 +86,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       agent.context.set(riddle.context);
       agent.add(new Card({
         title: 'Riddle Answer',
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/smartassistants/images/logo/logo.jpg',
+        imageUrl: 'https://smartassistants.s3-eu-west-1.amazonaws.com/images/logo/logo.jpg',
         text: result.riddle_answer + riddleEn
       }));
       agent.add(new Suggestion('ask me again'));
@@ -104,7 +104,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       agent.context.set(riddle.context);
       agent.add(new Card({
         title: 'पहेली का उत्तर',
-        imageUrl: 'https://s3-eu-west-1.amazonaws.com/smartassistants/images/logo/logo.jpg',
+        imageUrl: 'https://smartassistants.s3-eu-west-1.amazonaws.com/images/logo/logo.jpg',
         text: result.riddle_answer + riddleHi
       }));
       agent.add(new Suggestion('एक और मज़ेदार पहेली पूछो'));
