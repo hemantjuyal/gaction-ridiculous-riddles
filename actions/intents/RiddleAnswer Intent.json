@@ -1,0 +1,48 @@
+{
+  "id": "e74ab319-eb4e-45d5-b3cd-40b1a567fa68",
+  "name": "RiddleAnswer Intent",
+  "auto": true,
+  "contexts": [
+    "riddle-index"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [
+        {
+          "name": "riddle-index",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "64d0d2e6-e475-48d4-a7b5-92aa12456ef6",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "any",
+          "value": "$any",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "hi",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": true,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "actions_intent_TEXT"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+[
+  {
+    "id": "8543d085-f4cb-409c-bb6d-93f686e7e6c1",
+    "data": [
+      {
+        "text": "बाद में खेलेंगे",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "6a6eaf9f-4963-4675-8071-793fa2159cea",
+    "data": [
+      {
+        "text": "अब",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " मुझे नहीं खेला है",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "22212224-ade5-425b-a12b-4250b6d33537",
+    "data": [
+      {
+        "text": "आज",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " के लिए इतना काफ़ी है",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "26d10fd7-02cb-41f5-8a76-8bdba92fbfd5",
+    "data": [
+      {
+        "text": "अच्छा चलो हो गया",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "fb6c6687-ab4f-4d08-aef7-ffb450f77606",
+    "data": [
+      {
+        "text": "बस काफ़ी है",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "8fff21e3-7397-4041-b8f5-232d790fcf0f",
+    "data": [
+      {
+        "text": "हो गया",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "7584bacc-be6c-4964-b5fe-978707119643",
+    "data": [
+      {
+        "text": "ठीक है",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "42d440b4-c36b-418f-8b91-7ab3e5abcb98",
+    "data": [
+      {
+        "text": "गुड बाई",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ccbaf566-70dc-48c9-9e5c-6341d94e79b7",
+    "data": [
+      {
+        "text": "अच्छा ठीक है",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "176d30e1-fe7c-4794-9b9e-5724a38ef477",
+    "data": [
+      {
+        "text": "बस हो गया",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "d7ea24d7-7771-4cfb-bc88-bb8d0b95c753",
+    "data": [
+      {
+        "text": "अभी",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " के लिए इतना काफ़ी है",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

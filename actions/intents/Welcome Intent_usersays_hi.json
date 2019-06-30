@@ -1,0 +1,204 @@
+[
+  {
+    "id": "04662d40-fa44-435e-a356-b397735c0349",
+    "data": [
+      {
+        "text": "मैं तैयार हूँ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "269a936c-5458-4612-ac8b-8c4d98fc419e",
+    "data": [
+      {
+        "text": "कोई मज़ेदार सवाल",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ddc1c09e-ba9d-40ef-9d18-bd0056f84c81",
+    "data": [
+      {
+        "text": "कोई सवाल",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "cf97347e-c1e4-495f-b536-1b4fdb151704",
+    "data": [
+      {
+        "text": "कोई पहेली पूछे",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "b08e4627-a352-4683-9e8b-bb24fe529577",
+    "data": [
+      {
+        "text": "कोई ",
+        "userDefined": false
+      },
+      {
+        "text": "और",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " पहेली पूछो",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "abd109b1-5197-404e-ac16-c26685acd233",
+    "data": [
+      {
+        "text": "मुझे ",
+        "userDefined": false
+      },
+      {
+        "text": "एक",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "और",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " चान्स ",
+        "userDefined": false
+      },
+      {
+        "text": "दो",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "01b20163-ffd8-4eeb-843a-59c956f35e67",
+    "data": [
+      {
+        "text": "मज़ेदार पहेली पूछो",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a71ba99f-200d-4beb-af6f-48d575aa24c3",
+    "data": [
+      {
+        "text": "मज़ेदार पहेली सुनाओ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "41bad5c8-20b8-409a-8725-cb7c9160ecca",
+    "data": [
+      {
+        "text": "फिर से पूछो",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "2e8f4aca-dd11-41e6-89d7-258e1ee4d28c",
+    "data": [
+      {
+        "text": "एक",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "और",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " मज़ेदार पहेली पूछो",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "a8541601-0135-4b90-a784-d5b1d29f198b",
+    "data": [
+      {
+        "text": "बूझो तो जाने",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "091cd495-956c-4305-b4cd-dc5c484eaf46",
+    "data": [
+      {
+        "text": "मुझसे कोई पहेली पूछो",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "7264d897-38a2-40a8-a0d2-5b8a062bdd87",
+    "data": [
+      {
+        "text": "मुझे मज़ेदार पहेलियाँ सुननी है",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]
