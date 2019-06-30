@@ -19,7 +19,6 @@ process.env.DEBUG = 'dialogflow:debug';
 const riddles = require('./data/riddles');
 const riddles_hi = require('./data/riddles_hi');
 
-
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
   const agent =
     new WebhookClient({
@@ -29,6 +28,15 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
   console.log('Dialogflow Request headers: ' + JSON.stringify(request.headers));
   console.log('Dialogflow Request body: ' + JSON.stringify(request.body));
+
+  let conv = agent.conv();
+  const isWebBrowserAvailable = conv.surface.capabilities.has('actions.capability.WEB_BROWSER');
+  const isScreenOutputAvailable = conv.surface.capabilities.has('actions.capability.SCREEN_OUTPUT');
+  const isAudioOutputAvailable = conv.surface.capabilities.has('actions.capability.AUDIO_OUTPUT');
+
+  console.log('action surface capability');
+  console.log('isWebBrowserAvailable', isWebBrowserAvailable, 'isScreenOutputAvailable',
+    isScreenOutputAvailable, 'isAudioOutputAvailable', isAudioOutputAvailable);
 
   function welcome(agent) {
     console.log('welcome called');
@@ -40,24 +48,28 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       agent.add('Here is the riddle. ');
       agent.add(riddle.riddle_text);
       agent.context.set(riddle.context);
-      agent.add(new Card({
-        title: 'Ridiculous Riddle of The Day',
-        imageUrl: 'https://smartassistants.s3-eu-west-1.amazonaws.com/images/logo/logo.jpg',
-        text: riddle.riddle_text
-      }));
-      agent.add(new Suggestion('ask me another riddle'));
+      if (isScreenOutputAvailable) {
+        agent.add(new Card({
+          title: 'Ridiculous Riddle of The Day',
+          imageUrl: 'https://smartassistants.s3-eu-west-1.amazonaws.com/images/logo/logo.jpg',
+          text: riddle.riddle_text
+        }));
+        agent.add(new Suggestion('ask me another riddle'));
+      }
     } else if (riddle.locale === 'hi') {
       agent.add('ये रही पहेली! ');
       agent.add(riddle.riddle_text);
       agent.context.set(riddle.context);
-      agent.add(new Card({
-        title: 'आज की मज़ेदार पहेली ',
-        imageUrl: 'https://smartassistants.s3-eu-west-1.amazonaws.com/images/logo/logo.jpg',
-        text: riddle.riddle_text
-      }));
-      agent.add(new Suggestion('कोई और पहेली पूछो'));
-    }
-  }
+      if (isScreenOutputAvailable) {
+        agent.add(new Card({
+          title: 'आज की मज़ेदार पहेली ',
+          imageUrl: 'https://smartassistants.s3-eu-west-1.amazonaws.com/images/logo/logo.jpg',
+          text: riddle.riddle_text
+        }));
+        agent.add(new Suggestion('कोई और पहेली पूछो'));
+      }
+    } //end else-if
+  } //end main
 
 
   function riddleanswer(agent) {
@@ -84,14 +96,16 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       }
       agent.add(riddleEn);
       agent.context.set(riddle.context);
-      agent.add(new Card({
-        title: 'Riddle Answer',
-        imageUrl: 'https://smartassistants.s3-eu-west-1.amazonaws.com/images/logo/logo.jpg',
-        text: result.riddle_answer + riddleEn
-      }));
-      agent.add(new Suggestion('ask me again'));
-      agent.add(new Suggestion('one more fun riddle'));
-      agent.add(new Suggestion('let me try again'));
+      if (isScreenOutputAvailable) {
+        agent.add(new Card({
+          title: 'Riddle Answer',
+          imageUrl: 'https://smartassistants.s3-eu-west-1.amazonaws.com/images/logo/logo.jpg',
+          text: result.riddle_answer + riddleEn
+        }));
+        agent.add(new Suggestion('ask me again'));
+        agent.add(new Suggestion('one more fun riddle'));
+        agent.add(new Suggestion('let me try again'));
+      }
     } else if (result.locale === 'hi') {
       let riddleAnswerHi = ' सही उत्तर है! ' + result.riddle_answer + ' ';
       let riddleHi = ' ये रही अगली पहेली! ' + riddle.riddle_text;
@@ -102,17 +116,19 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       }
       agent.add(riddleHi);
       agent.context.set(riddle.context);
-      agent.add(new Card({
-        title: 'पहेली का उत्तर',
-        imageUrl: 'https://smartassistants.s3-eu-west-1.amazonaws.com/images/logo/logo.jpg',
-        text: result.riddle_answer + riddleHi
-      }));
-      agent.add(new Suggestion('एक और मज़ेदार पहेली पूछो'));
-      agent.add(new Suggestion('फिर से पूछो'));
-      agent.add(new Suggestion('मुझे एक और चान्स दो'));
-    }
+      if (isScreenOutputAvailable) {
+        agent.add(new Card({
+          title: 'पहेली का उत्तर',
+          imageUrl: 'https://smartassistants.s3-eu-west-1.amazonaws.com/images/logo/logo.jpg',
+          text: result.riddle_answer + riddleHi
+        }));
+        agent.add(new Suggestion('एक और मज़ेदार पहेली पूछो'));
+        agent.add(new Suggestion('फिर से पूछो'));
+        agent.add(new Suggestion('मुझे एक और चान्स दो'));
+      }
+    } //end else-if
+  } //end main
 
-  } //end
 
   function getRiddle(locale) {
     console.log('getRiddle called');
@@ -147,7 +163,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       'context': context
     };
 
-  } //end
+  } //end main
+
 
   function getRiddleAnswer(locale, rindex, ransweruser) {
     console.log('getRiddleAnswer called');
@@ -179,7 +196,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       "is_answer_correct": is_answer_correct,
       "riddle_answer": riddle_answers[0]
     };
-  } //end
+  } //end main
 
   function fallback(agent) {
     console.log('fallback called');
@@ -193,7 +210,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     } else if (agent.locale === 'hi') {
       agent.add('माफ़ कीजिये! मुझे समझ नहीं आया! फिर से कहिये');
     }
-  } //end
+  } //end main
 
 
   function exitconversation(agent) {
@@ -208,8 +225,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     } else if (agent.locale === 'hi') {
       agent.add('ठीक है! बाद में मिलते है');
     }
-
-  } //end
+  } //end main
 
 
   let intentMap = new Map();
