@@ -19,3 +19,15 @@
 #### Hindi Action - Smart Display
 
 ![Google Action Ridiculous Riddles Hindi](https://smartassistants.s3-eu-west-1.amazonaws.com/images/github/g_rr_snapshot_hi.png)
+
+
+## Live Action Links
+[Ridiculous Riddles](https://assistant.google.com/services/a/uid/000000fca0c68b42?hl=en)
+
+![Ridiculous Riddles](https://smartassistants.s3-eu-west-1.amazonaws.com/images/github/g_rr_snapshot_en_live.png)
+
+
+
+[मज़ेदार पहेली](https://assistant.google.com/services/a/uid/000000fca0c68b42?hl=hi)
+
+![मज़ेदार पहेली](https://smartassistants.s3-eu-west-1.amazonaws.com/images/github/g_rr_snapshot_hi_live.png)
