@@ -150,7 +150,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
     const context = {
       'name': 'riddle-index',
-      'lifespan': 2,
+      'lifespan': 10,
       'parameters': {
         'rindex': index
       }
@@ -202,14 +202,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     console.log('fallback called');
     console.log('agent locale ', agent.locale);
 
-    if (agent.locale === 'en' ||
-      agent.locale === 'en-in' || agent.locale === 'en-us' ||
-      agent.locale === 'en-gb' || agent.locale === 'en-ca' ||
-      agent.locale === 'en-au') {
-      agent.add(`Sorry, I didn't get that. Can you rephrase?`);
-    } else if (agent.locale === 'hi') {
-      agent.add('माफ़ कीजिये! मुझे समझ नहीं आया! फिर से कहिये');
-    }
+    riddleanswer(agent);
   } //end main
 
 
